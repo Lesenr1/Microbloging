@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lesenr1.microbloging.StatusActivity"
+    android:background="#cec8c8">
+
+    <TextView
+        android:text="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#ca4949"
+        android:id="@+id/AppTittle"
+        android:layout_alignParentStart="false"
+        android:autoText="false"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textStyle="normal|bold"
+        android:textIsSelectable="false"
+        android:textSize="31sp"
+        android:typeface="monospace" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/TextField"
+        android:textStyle="normal|italic"
+        android:typeface="monospace"
+        android:hint="@string/instructions_text"
+        android:textColor="#c6c6c6"
+        android:layout_marginTop="125dp"
+        android:layout_below="@+id/AppTittle"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/SendButton"
+        android:layout_alignParentEnd="false"
+        android:background="#ffffff"
+        android:inputType="textImeMultiLine"
+        android:maxLength="20"
+        android:imeOptions="actionDone"
+        android:gravity="left" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text"
+        android:id="@+id/SendButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold"
+        android:typeface="monospace" />
+
+</RelativeLayout>
