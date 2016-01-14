@@ -32,7 +32,7 @@ public class StatusActivity extends Activity {
 
         // Set Jtwitter API
         twitter = new Twitter("student", "password");
-        twitter.setAPIRootUrl("http://www.yamba.marakana.com/api");
+        twitter.setAPIRootUrl("http://yamba.newcircle.com/api");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status);
@@ -78,7 +78,12 @@ public class StatusActivity extends Activity {
             String Message = params[0];
 
             // TODO : Check Message lenght to be > 1 and < 200 characters
-            twitter.setStatus(Message);
+            try {
+                twitter.setStatus(Message);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+
 
             return 0;
         }
